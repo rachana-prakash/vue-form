@@ -1,7 +1,9 @@
 <template>
   <div class="reg-container">
     <section class="info-section">
-      <h3>Unlock the future of enterprise communication today!</h3>
+      <h3 class="main-title">
+        Unlock the future of enterprise communication today!
+      </h3>
       <div>
         <p class="sub-title">Why sign-up for a free trial:</p>
         <div class="detail-container">
@@ -21,9 +23,11 @@
       />
     </section>
     <section class="form-section">
-      <h3>
-        Join Prezent and transform the way your team Collaborates, Creates, and
-        Presents.
+      <h3 class="form-title">
+        <strong>
+          Join Prezent and transform the way your team Collaborates, Creates,
+          and Presents.
+        </strong>
       </h3>
       <RegistrationForm />
     </section>
@@ -96,6 +100,13 @@ export default {
 .reg-container {
   padding: 16px;
 }
+.form-section {
+  padding: 16px 0;
+}
+.form-title {
+  font-size: 16px;
+  line-height: 1.5;
+}
 .detail-container {
   padding-bottom: 20px;
 }
@@ -107,10 +118,18 @@ export default {
   .info-section {
     padding: 30px 30px 30px 40px;
     margin: 10px 10px 10px 20px;
-    flex-basis: 60%;
+    flex-basis: 55%;
   }
   .form-section {
-    flex-basis: 40%;
+    flex-basis: 45%;
+    background-color: var(--blue1);
+    color: white;
+    padding: 60px;
+  }
+  .main-title {
+    padding-top: 24px;
+    width: 400px;
+ 
   }
   .sub-title {
     color: var(--blue1);

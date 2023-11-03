@@ -16,6 +16,7 @@ body {
   height: 100%;
   margin: 0;
   font-family: Lato, sans-serif;
+  line-height: 1.5;
 }
 
 p {
