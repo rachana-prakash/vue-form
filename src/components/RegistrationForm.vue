@@ -4,37 +4,41 @@
       <div class="form-control">
         <input
           type="text"
-          id="firstName"
+          id="first-name"
           placeholder="First Name"
           v-model.trim.lazy="formValues.firstName"
+          required
         />
       </div>
       <div class="form-control">
         <input
           type="text"
-          id="lastName"
+          id="last-name"
           placeholder="Last Name"
           v-model.trim.lazy="formValues.lastName"
+          required
         />
       </div>
       <div class="form-control">
         <input
-          type="text"
+          type="email"
           id="email"
           placeholder="Work Email"
           v-model.trim.lazy="formValues.workEmail"
+          required
         />
       </div>
       <div class="form-control">
         <input
           type="text"
-          id="email"
+          id="company-name"
           placeholder="Company Name"
           v-model.trim.lazy="formValues.companyName"
+          required
         />
       </div>
       <div class="form-control">
-        <select id="companySize" v-model="formValues.companySize">
+        <select id="company-size" v-model="formValues.companySize">
           <option value="" disabled selected class="title">Company Size</option>
           <option value="small">less than 100</option>
           <option value="medium">between 100 - 1000</option>
@@ -47,6 +51,7 @@
           id="phone"
           placeholder="Phone"
           v-model.trim.lazy="formValues.phone"
+          required
         />
       </div>
 
@@ -58,7 +63,7 @@
         </select>
       </div>
 
-      <button class="submit-btn">Continue</button>
+      <button class="submit-btn" type="submit">Continue</button>
     </form>
   </div>
 </template>
@@ -80,8 +85,10 @@ export default {
     };
   },
   methods: {
-    submitForm() {
-      console.log(this.formValues);
+    submitForm(event) {
+      event.target.reset();
+      alert("Form submitted Successfully");
+      document.getElementById("company-size").value = "";
     },
   },
 };
@@ -89,6 +96,7 @@ export default {
 
 <style scoped>
 input[type="text"],
+input[type="email"],
 select {
   display: block;
   width: 100%;
@@ -126,6 +134,7 @@ form {
   font-size: 16px;
   border-radius: 35px;
   margin: 5px 15px;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   input[type="text"],
