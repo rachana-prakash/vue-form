@@ -1,6 +1,9 @@
 <template>
   <div class="reg-container">
     <section class="info-section">
+      <div class="logo-wrapper">
+        <img class="logo" src="../assets/prezent-logo.svg" />
+      </div>
       <h3 class="main-title">
         Unlock the future of enterprise communication today!
       </h3>
@@ -91,15 +94,14 @@ export default {
 .reg-container {
   display: flex;
   flex-direction: column-reverse;
+  padding: 48px 22px 22px 22px;
 }
 .sub-title {
   font-size: 20px;
   font-weight: 400;
   padding: 8px 0;
 }
-.reg-container {
-  padding: 16px;
-}
+
 .form-section {
   padding: 16px 0;
 }
@@ -109,6 +111,16 @@ export default {
 }
 .detail-container {
   padding-bottom: 20px;
+}
+.logo-wrapper {
+  z-index: 99;
+  position: absolute;
+  top: 29px;
+  bottom: auto;
+  right: auto;
+}
+.logo {
+  width: 90px;
 }
 @media screen and (min-width: 768px) {
   .reg-container {
@@ -125,14 +137,20 @@ export default {
     background-color: var(--blue1);
     color: white;
     padding: 60px;
+    padding-top: 100px;
   }
   .main-title {
     padding-top: 24px;
     width: 400px;
- 
   }
   .sub-title {
     color: var(--blue1);
+  }
+  .logo {
+    width: 120px;
+  }
+  .logo-wrapper {
+    position: static;
   }
 }
 </style>
