@@ -128,9 +128,9 @@ export default {
     padding: 0;
   }
   .info-section {
-    padding: 30px 30px 30px 40px;
+    padding: 30px 30px 30px 100px;
     margin: 10px 10px 10px 20px;
-    flex-basis: 55%;
+    flex-basis: calc(55% - 20px);
   }
   .form-section {
     flex-basis: 45%;
@@ -141,7 +141,7 @@ export default {
   }
   .main-title {
     padding-top: 24px;
-    width: 400px;
+    width: 300px;
   }
   .sub-title {
     color: var(--blue1);
