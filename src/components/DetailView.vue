@@ -34,8 +34,8 @@ export default {
   border-radius: 20%;
 }
 .img-container {
-  margin: 8px;
-  padding: 8px;
+  margin: 4px;
+  padding: 4px;
 }
 img {
   height: 36px;
@@ -43,18 +43,18 @@ img {
   padding: 10px;
 }
 .text-container {
-  margin: 8px;
+  margin: 4px;
   display: flex;
   flex-direction: column;
 }
 .title {
   font-weight: 400;
   font-size: 18px;
-  padding: 8px;
+  padding: 4px;
 }
 .description {
   font-size: 16px;
   font-weight: 300;
-  padding: 8px;
+  padding: 4px;
 }
 </style>

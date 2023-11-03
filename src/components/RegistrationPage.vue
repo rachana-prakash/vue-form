@@ -3,7 +3,7 @@
     <section class="info-section">
       <h3>Unlock the future of enterprise communication today!</h3>
       <div>
-        <p>Why sign-up for a free trial:</p>
+        <p class="sub-title">Why sign-up for a free trial:</p>
         <div>
           <template v-for="item in detailList" :key="item.id">
             <DetailView
@@ -78,9 +78,29 @@ export default {
   display: flex;
   flex-direction: column-reverse;
 }
+.sub-title {
+  font-size: 20px;
+  font-weight: 400;
+  padding: 8px 0;
+}
+.reg-container {
+  padding: 16px;
+}
 @media screen and (min-width: 768px) {
   .reg-container {
     flex-direction: row;
+    padding: 0;
+  }
+  .info-section {
+    padding: 30px 30px 30px 40px;
+    margin: 10px 10px 10px 20px;
+    flex-basis: 60%;
+  }
+  .form-section {
+    flex-basis: 40%;
+  }
+  .sub-title {
+    color: var(--blue1);
   }
 }
 </style>
