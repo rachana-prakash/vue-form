@@ -1,4 +1,4 @@
-# vue-form
+# A Simple Registration form showcasing Component Architecture
 
 ## Project setup
 ```
