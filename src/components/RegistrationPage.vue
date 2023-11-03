@@ -4,7 +4,7 @@
       <h3>Unlock the future of enterprise communication today!</h3>
       <div>
         <p class="sub-title">Why sign-up for a free trial:</p>
-        <div>
+        <div class="detail-container">
           <template v-for="item in detailList" :key="item.id">
             <DetailView
               :title="item.title"
@@ -14,7 +14,11 @@
           </template>
         </div>
       </div>
-      <TestimonialView />
+      <TestimonialView
+        :testimonial="testimonialData.quote"
+        :witness="testimonialData.wintess"
+        :designation="testimonialData.designation"
+      />
     </section>
     <section class="form-section">
       <h3>
@@ -67,6 +71,12 @@ export default {
           imgSrc: security,
         },
       ],
+      testimonialData: {
+        quote:
+          "Prezent blew away my expectations, and made my life so much easier! You’ve uncovered the secret in our consulting firms who charge us so much for presentations and slides.",
+        wintess: "Chief of Staff, Head of Business Strategy.",
+        designation: "Fortune 500 company",
+      },
     };
   },
   components: { RegistrationForm, DetailView, TestimonialView },
@@ -85,6 +95,9 @@ export default {
 }
 .reg-container {
   padding: 16px;
+}
+.detail-container {
+  padding-bottom: 20px;
 }
 @media screen and (min-width: 768px) {
   .reg-container {
